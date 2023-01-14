@@ -2,7 +2,7 @@ name: Build, Test and Deploy Postagram backend
 
 on:
   push:
-    branches: [ main ]
+    branches: [ chap14 ]
 
 jobs:
   build-test:
