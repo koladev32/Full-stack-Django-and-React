@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Injecting environment vars
       run: |
-        echo ${{ secrets.TEST_SECRETS }} >> .env
+        echo "${{ secrets.TEST_SECRETS }}" >> .env
     - name: Building Docker containers
       run: |
         docker-compose up -d --build
