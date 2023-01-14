@@ -15,7 +15,6 @@ jobs:
     - name: Building Docker containers
       run: |
         docker-compose up -d --build
-        docker-compose logs
     - name: Running Tests inside Docker containers
       run: |
         docker-compose exec -T api pytest
@@ -35,4 +34,4 @@ jobs:
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
           cd ~/.scripts
-          ./docker-deploy.sh
+          ./docker-ec2-deploy.sh
