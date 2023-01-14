@@ -15,6 +15,7 @@ jobs:
     - name: Building Docker containers
       run: |
         docker-compose up -d --build
+        docker-compose logs
     - name: Running Tests inside Docker containers
       run: |
         docker-compose exec -T api pytest
